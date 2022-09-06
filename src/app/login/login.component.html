@@ -1,0 +1,41 @@
+
+<br><br>
+<mat-card class="card">
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+  <h3>Login Details</h3>
+        
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+      <input matInput type="text" id="email" name="email" #email="ngModel" required minlength="6"  [(ngModel)]="contact.email">   
+    </mat-form-field>
+  
+    <div *ngIf="!email.valid">
+      <div *ngIf="email.errors?.['required']">
+            Email is required
+          </div>
+          <div *ngIf="email.errors?.['minlength']">
+            Email should be min length of 6
+          </div>
+    </div>
+<br>
+    <mat-form-field>
+      <mat-label >Password</mat-label>
+    
+        
+        <input matInput type="password" id="password" name="password" #password="ngModel" required minlength="10" [(ngModel)]="contact.password">
+      </mat-form-field>
+     
+      <div *ngIf="!password.valid">
+        <div *ngIf="password.errors?.['required']">
+             Password is required
+            </div>
+            <div *ngIf="password.errors?.['minlength']">
+             Password should be min length of 10
+            </div>
+     </div>
+     <p>
+        <button mat-raised-button="primary" type="submit">Submit</button>
+        
+      </p>
+     </form>
+    </mat-card>  

@@ -1,0 +1,34 @@
+.log
+{
+    color: black;
+   
+   text-align: center;
+    width: 00px;
+    background-color: rgba(255,255,255,0.85);
+
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.example-container
+{
+    color: black;
+   
+    height: 100px;
+    width: 200px;
+    background-color: rgba(255,255,255,0.85);
+    padding: 5px;
+  
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.example-icon {
+    padding: 0 4px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+.but
+{
+
+}
